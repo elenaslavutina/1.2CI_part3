@@ -10,7 +10,7 @@ public class PostMAnAPITest {
         given()
                 .baseUri("https://postman-echo.com")
                 .body( "Herman Melville" )
-                
+
         // отправляемые данные (заголовки и query можно выставлять аналогично)
 // Выполняемые действия
                 .when()
