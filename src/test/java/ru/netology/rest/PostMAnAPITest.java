@@ -3,6 +3,7 @@ package ru.netology.rest;
 import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
+import static org.hamcrest.Matchers.equalTo;
 
 public class PostMAnAPITest {
     @Test
@@ -19,7 +20,8 @@ public class PostMAnAPITest {
                 .then()
                 .log().all()
                 .statusCode(200)
-                //.body(/* --> ваша проверка здесь <-- */)
+                .body("data", equalTo("Herman Melville"))
+
         ;
     }
 }
